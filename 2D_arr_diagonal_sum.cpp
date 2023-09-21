@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -18,6 +18,7 @@ int main() {
 
   // Calculate the sum of diagonal elements
   for (int i = 0; i < len; i++) {
+    
     sum2 += arr[i][len - count];
     count++;
     for (int j = 0; j < len; j++) {
@@ -25,7 +26,10 @@ int main() {
         sum1 += arr[i][j];
     }
   }
-  std::cout << "Sum of left diagonal elements: " << sum1 << std::endl;
-  std::cout << "Sum of right diagonal elements: " << sum2 << std::endl;
+  int dif = 0;
+  //std::cout << "Sum of left diagonal elements: " << sum1 << std::endl;
+  //std::cout << "Sum of right diagonal elements: " << sum2 << std::endl;
+  dif = abs(sum1 - sum2 );
+  //cout << "dif = " << dif;
   return 0;
 }
